@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 
@@ -8,8 +9,8 @@ router.get('/', userController.show);
 
 router.post('/add', userController.save);
 
-router.get('/select/:id', userController.edit);
+router.put('/update', userController.edit);
 
-router.get('/delete/:id',userController.delete);
+router.get('/delete',userController.delete);
 
 module.exports = router;
